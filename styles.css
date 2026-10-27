@@ -1,0 +1,282 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(45deg, lightblue, lightyellow);
+  min-height: 100vh;
+  margin: 0;
+}
+
+header img {
+  border-radius: 30%;
+  width: 7rem;
+  max-height: 7rem;
+  margin: 20px;
+}
+
+h1 {
+  background: linear-gradient(45deg, black 0%, blue 20%, green 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-family: 'Bauhaus 93', sans-serif;
+  font-size: 2.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  font-family: 'Calibri', sans-serif;
+  color: darkslategray;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 1.5rem;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  max-width: 100%;
+  min-height: 7vh;
+  box-sizing: border-box;
+}
+
+.book-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 1.5rem;
+  margin-top: 5px;
+  border-radius: 20px;
+  max-width: 100%;
+  min-height: 7vh;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.add-section {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+#section-header img {
+  width: 2rem;
+  max-height: 2rem;
+  margin: 0;
+}
+
+#section-header h2 {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 1.25rem;
+}
+
+#section-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 20rem;
+  max-height: max-content;
+}
+
+.add-input {
+  margin-bottom: 5px;
+}
+
+input {
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Calibri', sans-serif;
+  font-size: 1rem;
+}
+
+label {
+  font-family: 'Comic Sans MS', cursive;
+}
+
+select {
+  padding: 1px 2px;
+  font-family: 'Calibri', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: blue;
+}
+
+#add-button {
+  background-color: lightcyan;
+  padding: 5px 20px;
+  margin-left: 50px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 1rem;
+}
+
+#add-button:hover {
+  background-color: blue;
+  color: white;
+  transform: scale(1.2);
+}
+
+dialog {
+  border-radius: 20px;
+  border: none;
+  background-color: lightyellow;
+  height: fit-content;
+  width: fit-content;
+  font-family: 'Calibri', sans-serif;
+}
+
+#add-message {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 1.25rem;
+}
+
+.add-dialog button {
+  background-color: lightcyan;
+  padding: 5px 20px;
+  margin-left: 50px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 1rem;
+}
+
+#add-dialog button:hover {
+  background-color: blue;
+  color: white;
+  transform: scale(1.2);
+}
+
+.collection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.collection h2 {
+  margin: 10px 0 20px 0;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 1.25rem;
+}
+
+.book-card:hover {
+  background-color: lightcyan;
+}
+
+#book-list {
+  width: 100%;
+}
+
+.book-card {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid lightgrey;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 1rem 0;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-photo {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.book-title {
+  font-family: 'Calibri', sans-serif;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  color: blue;
+}
+
+.book-author {
+  font-family: 'Calibri', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: blueviolet;
+}
+
+.book-availability {
+  margin-top: 2rem;
+  font-family: 'Calibri', sans-serif;
+  font-weight: bold;
+}
+
+.book-availability.available {
+  color: green;
+}
+
+.book-availability.unavailable {
+  color: red;
+}
+
+.remove-button {
+  align-self: flex-end;
+  margin: auto;
+  background-color: lightcyan;
+  border-radius: 10px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: blue;
+  color: white;
+}
+
+/*container for star and remove*/
+.book-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.star-rating button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.5rem;
+  color: gold;
+  cursor: pointer;
+}
+
+.star-rating button:hover {
+  transform: scale(1.5);
+}

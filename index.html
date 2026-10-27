@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="Favicon.png" type="image/png" />
+    <title>Book Collection Manager</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="books/Book Logo.png" alt="Logo" />
+      <div class="header-top">
+        <h1>BookShelf</h1>
+        <p>
+          Browse your BookShelf library and add new books to your collection.
+        </p>
+      </div>
+    </header>
+
+    <main class="book-layout">
+      <section class="add-section">
+        <div id="section-header">
+          <img src="Add Book.png" alt="Add Book" />
+          <h2 id="add-icon">Add A Book</h2>
+        </div>
+
+        <form id="book-form">
+          <div class="add-fields">
+            <div class="add-input">
+              <label for="book-title">
+                <input
+                  type="text"
+                  id="book-title"
+                  placeholder="🎗️ *Title*"
+                  required
+                />
+              </label>
+            </div>
+
+            <div class="add-input">
+              <label for="book-author">
+                <input
+                  type="text"
+                  id="book-author"
+                  placeholder="🖊️ *Author*"
+                  required
+                />
+              </label>
+            </div>
+
+            <div class="add-input">
+              <label for="book-genre">
+                <input
+                  type="text"
+                  id="book-genre"
+                  placeholder="🔍 *Genre*"
+                  required
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="add-input">
+            <label for="book-photo">Book Cover:</label>
+            <input type="file" id="book-photo" accept="image/*" />
+          </div>
+        </div>
+
+          <div class="add-availability">
+            <label for="book-availability">Available?</label>
+            <select id="book-availability" name="available">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <button type="submit" id="add-button">Add Book</button>
+        </form>
+
+        <dialog id="add-dialog" class="add-dialog">
+          <p id="add-message">Book has been added</p>
+          <button id="close-dialog">OK</button>
+        </dialog>
+      </section>
+
+      <section class="collection">
+        <h2>📚 Book List</h2>
+        <div id="book-list"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
